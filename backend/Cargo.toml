@@ -2,8 +2,6 @@
 name = "backend"
 version = "0.1.0"
 edition = "2024"
-author = "Azizul Islam"
-email = "azizul7m@gmail.com"
 
 [[bin]]
 name = "swiftcart"
@@ -16,7 +14,7 @@ serde = { version = "1.0", features = ["derive"] }
 dotenvy = "0.15.7"
 serde_json = "1.0.145"
 anyhow = "1.0.100"
-sqlx = {version= "0.8.6", features= ["postgres", "runtime-tokio", "uuid", "chrono"]}
 uuid = { version = "1.18.1", features = ["v4", "serde"] }
 chrono = {version = "0.4.42", features = ["serde"]}
 tower-http = { version = "0.6.6", features = ["cors"] }
+diesel = { version = "2.3.3", features = ["chrono", "extras", "postgres", "serde_json", "uuid"] }
