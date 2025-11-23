@@ -3,6 +3,7 @@ name = "backend"
 version = "0.1.0"
 edition = "2024"
 
+
 [[bin]]
 name = "swiftcart"
 path = "src/main.rs"
@@ -11,10 +12,10 @@ path = "src/main.rs"
 axum = {version= "0.8.4" , features = ["tokio","macros", "json", "query"]}
 tokio = { version = "1.48.0", features = ["full"] }
 serde = { version = "1.0", features = ["derive"] }
-dotenvy = "0.15.7"
 serde_json = "1.0.145"
 anyhow = "1.0.100"
 uuid = { version = "1.18.1", features = ["v4", "serde"] }
 chrono = {version = "0.4.42", features = ["serde"]}
 tower-http = { version = "0.6.6", features = ["cors"] }
-diesel = { version = "2.3.3", features = ["chrono", "extras", "postgres", "serde_json", "uuid"] }
+diesel = { version = "2.3.3", features = ["chrono", "postgres"] }
+dotenvy = "0.15.7"
