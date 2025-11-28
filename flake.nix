@@ -26,6 +26,7 @@
           env = {
             RUST_LOG = "debug";
             PG_CONFIG = "${pkgs.postgresql}/bin/pg_config";
+            LD_LIBRARY_PATH = "${pkgs.libpq}/lib";
           };
           shellHook = ''
             cowsay "Welcome to the Rust development shell!"
